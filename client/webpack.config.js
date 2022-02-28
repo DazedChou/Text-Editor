@@ -20,10 +20,10 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Webpack Plugin',
+        title: 'Text Editor',
       }),
       new InjectManifest({
-        swSrc: './src/sw.js',
+        swSrc: './src-3sw.js',
       }),
       new WebpackPwaManifest({
         // TODO: Create a manifest.json:
@@ -36,7 +36,7 @@ module.exports = () => {
         crossorigin: "use-credentials", //can be null, use-credentials or anonymous
         icons: [
           {
-            src: path.resolve("./assets/images/logo.png"),
+            src: path.resolve("./src/images/logo.png"),
             sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
             type: "image/png",
             purpose: "any maskable",
