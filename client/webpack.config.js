@@ -23,23 +23,26 @@ module.exports = () => {
         title: 'Text Editor',
       }),
       new InjectManifest({
-        swSrc: './src-3sw.js',
-      }),
+        swSrc: './src-sw.js',
+        swDest: './src-sw.js',
+      }), 
       new WebpackPwaManifest({
-        // TODO: Create a manifest.json:
-        name: "My Progressive Web App",
-        short_name: "MyPWA",
+        fingerprints: false,
+        inject: true,
+        name: "JATE",
+        short_name: "JATE",
         description: "My awesome Progressive Web App!",
         background_color: "#ffffff",
         stat_url: "/",
         publicPath: "/",
-        crossorigin: "use-credentials", //can be null, use-credentials or anonymous
+        // crossorigin: "use-credentials", 
         icons: [
           {
-            src: path.resolve("./src/images/logo.png"),
+            src: path.resolve("src/images/logo.png"),
             sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
             type: "image/png",
             purpose: "any maskable",
+            destination: path.join("assets","icons")
           },
         ],
       }),
@@ -52,8 +55,12 @@ module.exports = () => {
           use: ['style-loader', 'css-loader'],
         },
         {
+          test: /\.(png|svg|jpg|jpeg|gif)$/i,
+          type: 'asset/resource',
+        },
+        {
           test: /\.m?js$/,
-          exclude: /node_modules/,
+          exclude: /(node_modules|bower_components)/,
           use: {
             loader: 'babel-loader',
             options: {
