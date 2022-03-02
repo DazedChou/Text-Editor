@@ -1,27 +1,41 @@
 # Text-Editor
-GIVEN a text editor web application
-WHEN I open my application in my editor
-THEN I should see a client server folder structure
-WHEN I run `npm run start` from the root directory
-THEN I find that my application should start up the backend and serve the client
-WHEN I run the text editor application from my terminal
-THEN I find that my JavaScript files have been bundled using webpack
-WHEN I run my webpack plugins
-THEN I find that I have a generated HTML file, service worker, and a manifest file
-WHEN I use next-gen JavaScript in my application
-THEN I find that the text editor still functions in the browser without errors
-WHEN I open the text editor
-THEN I find that IndexedDB has immediately created a database storage
-WHEN I enter content and subsequently click off of the DOM window
-THEN I find that the content in the text editor has been saved with IndexedDB
-WHEN I reopen the text editor after closing it
-THEN I find that the content in the text editor has been retrieved from our IndexedDB
-WHEN I click on the Install button
-THEN I download my web application as an icon on my desktop
-WHEN I load my web application
-THEN I should have a registered service worker using workbox
-WHEN I register a service worker
-THEN I should have my static assets pre cached upon loading along with subsequent pages and static assets
-WHEN I deploy to Heroku
-THEN I should have proper build scripts for a webpack application
+
+![License Badge](https://img.shields.io/github/license/dazedchou/text-editor) ![Top Language](https://img.shields.io/github/languages/top/dazedchou/text-editor)
+
+This is a text editor that is a progressive web application. It utilizes indexedDb to store the content of the text editor, webpack to bundle assets, and a service worker to cache the assets.
+
+## Getting Started
+
+There are no prerequisites pertaining to this application. Simply head to the deployed link shown below and start typing.
+
+### Screenshot
+
+Shown below is the deployed page.
+![](./Screenshot_1.jpg)
+
+## Built With
+
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* [NodeJS] (https://nodejs.org/en/docs/)
+* [WebPack] (https://webpack.js.org/)
+
+## Deployed Link
+
+* [See Live Site](https://boiling-inlet-17978.herokuapp.com/)
+
+
+## Authors
+
+* **David Chou** 
+
+- [Link to Portfolio Site](https://dazedchou.github.io/Portfolio/)
+- [Link to Github](https://github.com/dazedchou)
+- [Link to LinkedIn](https://www.linkedin.com/in/davidchou99)
+
+
+## License
+
+This project is licensed under the MIT License 
 
